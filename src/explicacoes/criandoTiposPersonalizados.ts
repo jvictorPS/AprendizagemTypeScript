@@ -19,7 +19,7 @@ let exemplo: number | string       // vai poder receber valores do tipo number o
 // temos os Alias, para não ficarmos repetindo toda vez um determinado conjunto de tipos, 
 //podemos atribuir um nome a esse conjunto:
 
-type Planet = "Mercúrio" | "Vênus" | "Terra" | "Marte" | "Júpiter" | "Saturno" | "Urano" | "Netuno" | "Plutão"
+type Planeta = "Mercúrio" | "Vênus" | "Terra" | "Marte" | "Júpiter" | "Saturno" | "Urano" | "Netuno" | "Plutão"
 
 //tenho então um conjunto de tipos que denominei de "Planet"
 
@@ -27,6 +27,6 @@ let meusPlanetas: Planet    // agora minha variavel só pode receber esse conjun
 
 let sistemaSolar: Planet
 
-function planeta( planetas: Planet) {
+function planeta( planetas: Planeta) {
     //....
 }
