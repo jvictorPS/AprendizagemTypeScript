@@ -74,6 +74,37 @@ function first(array) {
   const copy2 = cloneShip(xWing, 'Black One', 'Poe')
 
 
+    //=====================================================================
+
+
+  // Outra coisa que pode ser necessária em alguns momentos é especificar manualmente 
+  // o tipo para a função genérica. Imagine que no 
+  // nosso caso não queremos que o VS Code infira automaticamente o mesmo tipo que passamos, 
+  // ao invés disso queremos forçar um tipo diferente. Vejamos como podemos fazer isso:
+
+  interface EnemyShip {
+    name: string
+    pilot: string
+    flag?: string // A propriedade é opcional para evitar erros
+  }
+  
+  // O tipo Ship não estaria correto aqui
+  const enemyCopy = cloneShip(falcon, 'Enemy', 'Enemy')
+  // Mas podemos explicitamente passar o tipo para a função
+  // e agora temos o tipo EnemyShip atribuido corretamente
+  const enemyCopy2 = cloneShip<EnemyShip>(falcon, 'Enemy', 'Enemy')
+  
+  // Aqui temos um erro por conta do tipo Ship
+  // enemyCopy.flag = 'Imperial'
+
+  // Já aqui temos a propriedade opcional flag
+  enemyCopy2.flag = 'Imperial'
+
+
+  
+    //=====================================================================
+
+
 
   // Segue a mesma implementação das funções
 // e o mesmo valeria para as interfaces
