@@ -4,6 +4,7 @@
         "outDir": "dist",
         "target": "ES6",
         "noEmitOnError": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "experimentalDecorators": true
     }
 }
